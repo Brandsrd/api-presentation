@@ -1,0 +1,18 @@
+<div style="margin-left: 50px; pargin-top: 100px;">
+  <div>
+    <p> Add users on Provider! </p>
+    <form action="/create_user" method="POST" >
+      <input type="text" name="name">
+    </form>
+  </div>
+
+
+  <div>
+    <p> current users from provider: <%= @users.count %></p>
+    <ul>
+      <% @users.each do |user| %>
+        <li><%= user['name'] %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
